@@ -1,0 +1,11 @@
+CREATE DATABASE api_atacadao;
+
+USE api_atacadao;
+
+CREATE TABLE IF NOT EXISTS `tbl_clientes` (
+    `id` int(11) NOT NULL PRIMARY KEY,
+    `nome` varchar(255) NOT NULL,
+    `dt_nasc` date NOT NULL,
+    `cpf` varchar(11) NOT NULL UNIQUE,
+    `rg` varchar (7) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4_general_ci ROW_FORMAT=COMPACT;
